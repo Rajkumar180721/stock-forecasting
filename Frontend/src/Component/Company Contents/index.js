@@ -2,6 +2,7 @@
 import { Chart as Chartjs, registerables } from "chart.js";
 import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
+import { Dropdown } from "../dropdown";
 import { options, price_filter, dataModel } from "./graph.util";
 
 // const data = {
@@ -51,12 +52,15 @@ export default ({code, currentFilter, loadingCode, loadError}) => {
             </div>
             :
             <>
-            <div className="container capitalize bg-white mx-auto my-12 p-10 text-gray-500 text-4xl text-center rounded-lg font-light">
+            <div className="container relative capitalize bg-white mx-auto my-12 p-10 text-gray-500 text-4xl text-center rounded-lg font-light">
                 { msg }
                 {
                     latestPrice
                     ?
+                    <>
                     <span className=" text-3xl"> {latestPrice}</span>
+                    <Dropdown />
+                    </>
                     :
                     null
                 }

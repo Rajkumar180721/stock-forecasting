@@ -14,7 +14,7 @@ export default ({setCode, currentFilter, changeFilter}) => {
             <div className="mx-auto mt-6 text-white">
                 <div data-selected={currentFilter === 'Today'} className="inline-block mx-4 my-2 font-light cursor-pointer border-b-2 border-transparent data-[selected=true]:border-white data-[selected=true]:font-normal" onClick={() => changeFilter('Today')}>Today</div>
                 <div data-selected={currentFilter === 'Week'} className="inline-block mx-4 my-2 font-light cursor-pointer border-b-2 border-transparent data-[selected=true]:border-white data-[selected=true]:font-normal " onClick={() => changeFilter('Week')}>Week</div>
-                <div data-selected={currentFilter === 'Month'} className="inline-block mx-4 my-2 font-light cursor-pointer border-b-2 border-transparent data-[selected=true]:border-white data-[selected=true]:font-normal" onClick={() => changeFilter('Month')}>Month</div>
+                {/* <div data-selected={currentFilter === 'Month'} className="inline-block mx-4 my-2 font-light cursor-pointer border-b-2 border-transparent data-[selected=true]:border-white data-[selected=true]:font-normal" onClick={() => changeFilter('Month')}>Month</div> */}
             </div>
         </div>
     );
